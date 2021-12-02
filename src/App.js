@@ -1,12 +1,16 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import Header from "./components/Header";
 
 function App() {
-  return (
-    <div className="App">
-     Social Network App
-    </div>
-  );
+	return (
+		<AppWrapper>
+			<Header />
+		</AppWrapper>
+	);
 }
 
+const AppWrapper = styled.div`
+	background-color: #f1f2f5;
+`;
 export default App;
