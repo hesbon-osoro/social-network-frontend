@@ -20,6 +20,7 @@ function App() {
 
 const AppWrapper = styled.div`
 	background-color: #f1f2f5;
+	overflow-x: hidden;
 	.app__body {
 		display: flex;
 	}
