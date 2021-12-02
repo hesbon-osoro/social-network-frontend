@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {
 	Search,
 	Home,
+	Flag,
 	SubscriptionsOutlined,
 	StorefrontOutlined,
 	SupervisedUserCircle,
@@ -25,16 +26,19 @@ const Header = () => {
 			</HeaderInput>
 			<HeaderCenter>
 				<div className="header__option header__option--active">
-					<Home fontsize="large" />
+					<Home fontSize="large" />
 				</div>
 				<div className="header__option">
-					<SubscriptionsOutlined fontsize="large" />
+					<Flag fontSize="large" />
 				</div>
 				<div className="header__option">
-					<StorefrontOutlined />
+					<SubscriptionsOutlined fontSize="large" />
 				</div>
 				<div className="header__option">
-					<SupervisedUserCircle fontsize="large" />
+					<StorefrontOutlined fontSize="large" />
+				</div>
+				<div className="header__option">
+					<SupervisedUserCircle fontSize="large" />
 				</div>
 			</HeaderCenter>
 			<HeaderRight>
