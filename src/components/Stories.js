@@ -7,15 +7,19 @@ const Stories = () => {
 		<StoriesWrapper>
 			<Story
 				image="https://i.postimg.cc/fR2KxrH0/lady.jpg"
-				profileSrc="https://i.postimg.cc/RFYn9wvk/portfolio.png"
+				profileSrc="https://i.postimg.cc/G3gmSBgC/cesar-rincon-XHVp-Wcr5gr-Q-unsplash.jpg"
 				title="Wazimu"
 			/>
 			<Story
-				image="https://i.postimg.cc/Pf6TW2mL/dating-app-frontend.png"
+				image="https://i.postimg.cc/rmQwTz85/charles-deluvio-Mv9hjn-EUHR4-unsplash.jpg"
 				profileSrc="https://i.postimg.cc/RFYn9wvk/portfolio.png"
-				title="Wazimu"
+				title="Hesbon"
 			/>
-			<Story image profileSrc title="Hesbon" />
+			<Story
+				image="https://i.postimg.cc/SRRNxqs3/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg"
+				profileSrc="https://i.postimg.cc/SRRNxqs3/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg"
+				title="Hb"
+			/>
 		</StoriesWrapper>
 	);
 };
