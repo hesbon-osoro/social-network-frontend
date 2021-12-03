@@ -13,10 +13,11 @@ const Feed = () => {
 
 	const syncFeed = () => {
 		axios.get("/posts").then((res) => {
-			console.log(res.data);
+			// console.log(res.data);
 			setPosts(res.data);
 		});
 	};
+	useEffect(()=>syncFeed(),[])
 	
 	useEffect(() => {
 		const channel = pusher.subscribe("posts");
@@ -33,7 +34,7 @@ const Feed = () => {
 				<Post
 					key={post.timestamp}
 					profilePic={post.avatar}
-					messafe={post.text}
+					message={post.text}
 					timestamp={post.timestamp}
 					imgName={post.imgName}
 					username={post.user}
