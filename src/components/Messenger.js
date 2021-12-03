@@ -20,7 +20,7 @@ const Messenger = () => {
 
 		const savePost = async (post) => {
 			await axios.post("/upload/post", post).then((res) => {
-				console.log(res);
+				// console.log(res);
 			});
 		};
 
