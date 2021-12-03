@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Avatar, Input } from "@material-ui/core";
 import { PhotoLibrary, InsertEmoticon, Videocam } from "@material-ui/icons";
 import styled from "styled-components";
+import { useStateValue } from "../StateProvider";
 
 const Messenger = () => {
 	const [input, setInput] = useState("");
 	const [image, setImage] = useState(null);
+	const [{ user }, dispatch] = useStateValue();
 
 	const handleChange = (e) => {
 		if (e.target.files[0]) setImage(e.target.files[0]);
@@ -16,7 +18,7 @@ const Messenger = () => {
 	return (
 		<MessengerWrapper>
 			<MessengerTop>
-				<Avatar src="https://i.postimg.cc/RFYn9wvk/portfolio.png" />
+				<Avatar src={user.photoURL} />
 				<form>
 					<input
 						type="text"
