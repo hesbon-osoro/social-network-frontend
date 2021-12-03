@@ -10,13 +10,17 @@ import {
 	ExpandMoreOutlined,
 } from "@material-ui/icons";
 import styled from "styled-components";
+import {useStateValue} from "../StateProvider";
 
 const Sidebar = () => {
+
+	const [{user},dispatch] = useStateValue();
+
 	return (
 		<SidebarWrapper>
 			<SidebarRow
-				src="https://i.postimg.cc/RFYn9wvk/portfolio.png"
-				title="Wazimu"
+				src={user.photoURL}
+				title={user.displayName}
 			/>
 			<SidebarRow Icon={LocalHospital} title="COVID-19 Information Center" />
 			<SidebarRow Icon={EmojiFlags} title="Pages" />
