@@ -1,5 +1,6 @@
 ## Social Network App
 
+![Social Network Home](assets/social.png)
 ## Technologies
 
 - React
@@ -10,3 +11,6 @@
 - Google Authentication
 - Pusher
 - Facebook Developer API
+
+## Demo
+![Google Authentication](assets/social1.png)
