@@ -1,3 +1,4 @@
+.firebase
 src/firebase.js
 # dependencies
 /node_modules
