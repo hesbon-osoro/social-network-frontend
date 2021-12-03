@@ -11,7 +11,7 @@ const Feed = () => {
 			<Messenger />
 			<Post
 				profilePic="https://i.postimg.cc/SRRNxqs3/michael-dam-m-EZ3-Po-FGs-k-unsplash.jpg"
-				message="Awesome post on Animation. Loved it"
+				message="I found this art worth sharing. I hope you like it."
 				timestamp="2021-12-03T08:06:34.036Z"
 				imgName="https://i.postimg.cc/fR2KxrH0/lady.jpg"
 				a
@@ -19,7 +19,7 @@ const Feed = () => {
 			/>
 			<Post
 				profilePic="https://i.postimg.cc/RFYn9wvk/portfolio.png"
-				message="Awesome post on Animation. Loved it"
+				message="This is an awesome hair style. "
 				timestamp="2021-12-03T08:05:33.429Z"
 				imgName="https://i.postimg.cc/G3gmSBgC/cesar-rincon-XHVp-Wcr5gr-Q-unsplash.jpg"
 				username="Hesbon"
