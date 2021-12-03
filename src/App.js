@@ -1,19 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Feed from "./components/Feed";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Widget from "./components/Widget";
+import Login from "./components/Login";
 
 function App() {
+	const [user, setUser] = useState(null);
 	return (
 		<AppWrapper>
-			<Header />
-			<div className="app__body">
-				<Sidebar />
-				<Feed />
-				<Widget />
-			</div>
+			{user ? (
+				<>
+					<Header />
+					<div className="app__body">
+						<Sidebar />
+						<Feed />
+						<Widget />
+					</div>
+				</>
+			) : (
+				<Login />
+			)}
 		</AppWrapper>
 	);
 }
