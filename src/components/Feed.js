@@ -4,6 +4,9 @@ import styled from "styled-components";
 import Messenger from "./Messenger";
 import Post from "./Post";
 import axios from "../axios";
+import Pusher from "pusher-js";
+
+const pusher = new Pusher("bccd74f5e0fee3c302a4", { cluster: "mt1" });
 
 const Feed = () => {
 	const [posts, setPosts] = useState([]);
@@ -14,9 +17,14 @@ const Feed = () => {
 			setPosts(res.data);
 		});
 	};
+	
 	useEffect(() => {
-		syncFeed();
+		const channel = pusher.subscribe("posts");
+		channel.bind("inserted", (data) => {
+			syncFeed();
+		});
 	}, []);
+
 	return (
 		<FeedWrapper>
 			<Stories />
