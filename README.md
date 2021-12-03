@@ -7,5 +7,6 @@
 - Express
 - MongoDB
 - Firebase
+- Google Authentication
 - Pusher
 - Facebook Developer API
