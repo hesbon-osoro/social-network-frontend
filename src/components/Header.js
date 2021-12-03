@@ -13,8 +13,10 @@ import {
 	ExpandMore,
 } from "@material-ui/icons";
 import { IconButton, Avatar } from "@material-ui/core";
+import { useStateValue } from "../StateProvider";
 
 const Header = () => {
+	const [{ user }, dispatch] = useStateValue();
 	return (
 		<HeaderWrapper>
 			<HeaderLeft>
@@ -43,8 +45,8 @@ const Header = () => {
 			</HeaderCenter>
 			<HeaderRight>
 				<div className="header__info">
-					<Avatar src="https://i.postimg.cc/RFYn9wvk/portfolio.png" />
-					<h4>Wazimu</h4>
+					<Avatar src={user?.photoURL} />
+					<h4>{user.displayName}</h4>
 				</div>
 				<IconButton>
 					<Add />
