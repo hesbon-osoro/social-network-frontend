@@ -16,7 +16,7 @@ const Post = ({ profilePic, message, timestamp, imgName, username }) => {
 				<Avatar src={profilePic} className="post__avatar" />
 				<div className="post__topInfo">
 					<h3>{username}</h3>
-					<p>{new Date(timestamp).toString()}</p>
+					<p>{new Date(parseInt(timestamp)).toUTCString()}</p>
 				</div>
 			</PostTop>
 			<PostBottom>
@@ -25,7 +25,7 @@ const Post = ({ profilePic, message, timestamp, imgName, username }) => {
 			{imgName ? (
 				<div className="post__image">
 					<img
-						src={`http://localhost:9000/images/single?name=${imgName}`}
+						src={`https://social-network-mern-hb.herokuapp.com/images/single?name=${imgName}`}
 						alt="Posts"
 					/>
 				</div>
