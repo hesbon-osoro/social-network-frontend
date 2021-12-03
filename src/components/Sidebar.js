@@ -10,18 +10,14 @@ import {
 	ExpandMoreOutlined,
 } from "@material-ui/icons";
 import styled from "styled-components";
-import {useStateValue} from "../StateProvider";
+import { useStateValue } from "../StateProvider";
 
 const Sidebar = () => {
-
-	const [{user},dispatch] = useStateValue();
+	const [{ user }, dispatch] = useStateValue();
 
 	return (
 		<SidebarWrapper>
-			<SidebarRow
-				src={user.photoURL}
-				title={user.displayName}
-			/>
+			<SidebarRow src={user.photoURL} title={user.displayName} />
 			<SidebarRow Icon={LocalHospital} title="COVID-19 Information Center" />
 			<SidebarRow Icon={EmojiFlags} title="Pages" />
 			<SidebarRow Icon={People} title="Friends" />
