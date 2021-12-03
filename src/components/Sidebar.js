@@ -29,5 +29,8 @@ const Sidebar = () => {
 	);
 };
 
-const SidebarWrapper = styled.div``;
+const SidebarWrapper = styled.div`
+	position: sticky;
+	top: 0;
+`;
 export default Sidebar;
