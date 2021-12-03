@@ -96,15 +96,15 @@ const MessengerBottom = styled.div`
 		align-items: center;
 		color: gray;
 		margin: 5px;
-	}
-	h3 {
-		font-size: medium;
-		margin-left: 10px;
-	}
-	&:hover {
-		background-color: #eff2f5;
-		border-radius: 20px;
-		cursor: pointer;
+		h3 {
+			font-size: medium;
+			margin-left: 10px;
+		}
+		&:hover {
+			background-color: #eff2f5;
+			border-radius: 20px;
+			cursor: pointer;
+		}
 	}
 `;
 export default Messenger;
