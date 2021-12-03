@@ -3,6 +3,8 @@ import { Avatar, Input } from "@material-ui/core";
 import { PhotoLibrary, InsertEmoticon, Videocam } from "@material-ui/icons";
 import styled from "styled-components";
 import { useStateValue } from "../StateProvider";
+import axios from "../axios";
+import FormData from "form-data";
 
 const Messenger = () => {
 	const [input, setInput] = useState("");
@@ -12,8 +14,46 @@ const Messenger = () => {
 	const handleChange = (e) => {
 		if (e.target.files[0]) setImage(e.target.files[0]);
 	};
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		const savePost = async (post) => {
+			await axios.post("/upload/post", post).then((res) => {
+				console.log(res);
+			});
+		};
+
+		if (image) {
+			const imgForm = new FormData();
+			imgForm.append("file", image, image.name);
+			axios
+				.post("/upload/image", imgForm, {
+					headers: {
+						'accept': "application/json",
+						"Accept-Language": "en-US,en;q=0.8",
+						"Content-Type": `multipart/form-data;boundary=${imgForm._boundary}`,
+					},
+				})
+				.then((res) => {
+					const post = {
+						text: input,
+						imgName: res.data.filename,
+						user: user.displayName,
+						avatar: user.photoURL,
+						timestamp: Date.now(),
+					};
+					savePost(post);
+				});
+		} else {
+			const post = {
+				text: input,
+				user: user.displayName,
+				avatar: user.photoURL,
+				timestamp: Date.now(),
+			};
+			savePost(post);
+		}
 	};
 	return (
 		<MessengerWrapper>
