@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Feed from "./components/Feed";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Widget from "./components/Widget";
 import Login from "./components/Login";
+import { useStateValue } from "./StateProvider";
 
 function App() {
-	const [user, setUser] = useState(null);
+	const [{ user }, dispatch] = useStateValue();
 	return (
 		<AppWrapper>
 			{user ? (
