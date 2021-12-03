@@ -6,3 +6,6 @@
 - Node
 - Express
 - MongoDB
+- Firebase
+- Pusher
+- Facebook Developer API
