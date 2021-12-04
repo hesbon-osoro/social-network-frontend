@@ -1,14 +1,14 @@
-import React from "react";
 import styled from "styled-components";
-import Feed from "./components/Feed";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import Widget from "./components/Widget";
+import Feed from "./components/Feed";
 import Login from "./components/Login";
 import { useStateValue } from "./StateProvider";
+import Widget from "./components/Widget";
 
 function App() {
 	const [{ user }, dispatch] = useStateValue();
+	// const [user, setUser] = useState(null)
 	return (
 		<AppWrapper>
 			{user ? (
@@ -26,10 +26,8 @@ function App() {
 		</AppWrapper>
 	);
 }
-
 const AppWrapper = styled.div`
 	background-color: #f1f2f5;
-	overflow-x: hidden;
 	.app__body {
 		display: flex;
 	}
