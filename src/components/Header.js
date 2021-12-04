@@ -66,14 +66,14 @@ const Header = () => {
 };
 
 const HeaderWrapper = styled.div`
+	position: sticky;
+	top: 0;
 	display: flex;
 	padding: 15px 20px;
 	justify-content: space-between;
 	align-items: center;
-	position: sticky;
 	background-color: white;
 	z-index: 100;
-	top: 0;
 	box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
 `;
 const HeaderLeft = styled.div`
