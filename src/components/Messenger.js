@@ -54,6 +54,8 @@ const Messenger = () => {
 			};
 			savePost(post);
 		}
+		setInput("");
+		setImage(null);
 	};
 	return (
 		<MessengerWrapper>
