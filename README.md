@@ -1,6 +1,7 @@
 ## Social Network App
 
 ![Social Network Home](assets/social.png)
+
 ## Technologies
 
 - React
@@ -13,4 +14,5 @@
 - Facebook Developer API
 
 ## Demo
+
 ![Google Authentication](assets/social1.png)
